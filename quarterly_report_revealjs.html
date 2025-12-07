@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Earnings — Interactive Report</title>
+
+  <!-- Reveal.js core (from CDN) -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/theme/black.css" id="theme">
+
+  <!-- Highlight.js for code highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+
+  <style>
+    /* Small customizations */
+    .email { font-size: 0.9rem; opacity: 0.9; }
+    pre.hljs { max-height: 45vh; overflow: auto; }
+  </style>
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title slide -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <h3>Technical Consultant — Data & Analytics</h3>
+        <p class="email">Contact: <a href="mailto:23f1001533@ds.study.iitm.ac.in">23f1001533@ds.study.iitm.ac.in</a></p>
+        <aside class="notes">Quick intro: state the quarter, headline metrics, and jump to the deck flow.</aside>
+      </section>
+
+      <!-- Markdown slide -->
+      <section data-markdown>
+        <script type="text/template">
+
+## Executive Summary (Markdown slide)
+
+- **Revenue**: \$X million (up Y% QoQ)
+- **Net Income**: \$Z million
+- **Key drivers:**
+  - Product A growth
+  - Cost optimization
+
+> *This slide demonstrates Reveal's Markdown slide support.*
+
+        </script>
+        <aside class="notes">Read top-line bullets clearly. Mention one quick anecdote behind the driver numbers.</aside>
+      </section>
+
+      <!-- Fragment animations -->
+      <section>
+        <h2>Highlights</h2>
+        <ul>
+          <li class="fragment">Revenue growth above forecast</li>
+          <li class="fragment">Reduced operating costs</li>
+          <li class="fragment">Improved customer retention</li>
+        </ul>
+        <aside class="notes">Use fragments to reveal items one by one to keep audience focus.</aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h2>Example: Compute CAGR (Python)</h2>
+        <pre><code class="language-python">def cagr(start_value, end_value, years):
+    """Compound Annual Growth Rate"""
+    return (end_value / start_value) ** (1 / years) - 1
+
+print(f"CAGR: {cagr(100, 150, 3):.2%}")
+</code></pre>
+        <aside class="notes">Walk through the formula quickly and explain practical use. Show inputs and interpretation.</aside>
+      </section>
+
+      <!-- Math slide -->
+      <section>
+        <h2>Financial Formula</h2>
+        <p>Net Present Value (NPV):</p>
+        <p>\[\mathrm{NPV} = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t} \]</p>
+        <p>Where \(C_t\) are cashflows and \(r\) is discount rate.</p>
+        <aside class="notes">Explain intuition: discount future cash to present. Use a short example if asked.</aside>
+      </section>
+
+      <!-- Slide with fragments and mixed content -->
+      <section>
+        <h2>Recommendation</h2>
+        <p class="fragment">1. Reinvest in Product A (high ROI).</p>
+        <p class="fragment">2. Continue cost optimisation (process automation).</p>
+        <p class="fragment">3. Increase retention efforts for segment B.</p>
+        <aside class="notes">Tie recommendations to KPI impact and estimated costs/benefits.</aside>
+      </section>
+
+      <!-- Closing / Contact slide -->
+      <section>
+        <h2>Contact & Repo</h2>
+        <p>For the full interactive deck source and deployment instructions, see the project repo.</p>
+        <p class="email">Email: <a href="mailto:23f1001533@ds.study.iitm.ac.in">23f1001533@ds.study.iitm.ac.in</a></p>
+        <aside class="notes">Point them to the GitHub Pages link (published). Offer to walk through the publishing steps if requested.</aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js and plugins -->
+  <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.esm.js"></script>
+  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/notes/notes.esm.js"></script>
+  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/math/math.esm.js"></script>
+  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.esm.js"></script>
+
+  <!-- Highlight.js core (for code blocks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+  <script>
+    // Initialize Reveal
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath ],
+      math: {
+        // mathjax config
+        engine: 'mathjax',
+        config: 'TeX-AMS_HTML-full'
+      }
+    });
+  </script>
+</body>
+</html>
