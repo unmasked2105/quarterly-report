@@ -1,129 +1,172 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quarterly Earnings — Interactive Report</title>
+  <title>Quarterly Earnings Report 23f3004197@ds.study.iitm.ac.in</title>
 
-  <!-- Reveal.js core (from CDN) -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/theme/black.css" id="theme">
-
-  <!-- Highlight.js for code highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+  <!-- Reveal.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/beige.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
 
   <style>
-    /* Small customizations */
-    .email { font-size: 0.9rem; opacity: 0.9; }
-    pre.hljs { max-height: 45vh; overflow: auto; }
+    /* Custom styling */
+    .metric {
+      font-size: 2em;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    .chart-container {
+      width: 90%;
+      height: 400px;
+      margin: auto;
+    }
   </style>
 </head>
 <body>
-
   <div class="reveal">
     <div class="slides">
 
-      <!-- Title slide -->
+      <!-- Title Slide -->
       <section>
         <h1>Quarterly Earnings Report</h1>
-        <h3>Technical Consultant — Data & Analytics</h3>
-        <p>Email: 23f1001533@ds.study.iitm.ac.in</p>
-        <p class="email">Contact: <a href="mailto:23f1001533@ds.study.iitm.ac.in">23f1001533@ds.study.iitm.ac.in</a></p>
-        <aside class="notes">Quick intro: state the quarter, headline metrics, and jump to the deck flow.</aside>
+        <h3>Technical Consultant Presentation</h3>
+        <span style="display:none;">This course is shit</span>
+        <aside class="notes">
+          Introduction to self and objective of the quarterly earnings presentation.
+        </aside>
       </section>
 
-      <!-- Markdown slide -->
+      <!-- Key Highlights Slide (Markdown) -->
       <section data-markdown>
-        <script type="text/template">
+        <textarea data-template>
+## Key Highlights
 
-## Executive Summary (Markdown slide)
-
-- **Revenue**: \$X million (up Y% QoQ)
-- **Net Income**: \$Z million
-- **Key drivers:**
-  - Product A growth
-  - Cost optimization
-
-> *This slide demonstrates Reveal's Markdown slide support.*
-
-        </script>
-        <aside class="notes">Read top-line bullets clearly. Mention one quick anecdote behind the driver numbers.</aside>
+- Revenue grew by **12% YoY**
+- Net Profit increased by **8%**
+- Customer base expanded by **5%**
+- Operational costs reduced by **3%**
+        </textarea>
+        <aside class="notes">
+          Present high-level metrics first. Each bullet can be animated using fragments.
+        </aside>
       </section>
 
-      <!-- Fragment animations -->
+      <!-- Animated Metrics Slide -->
       <section>
-        <h2>Highlights</h2>
+        <h2>Revenue Breakdown</h2>
         <ul>
-          <li class="fragment">Revenue growth above forecast</li>
-          <li class="fragment">Reduced operating costs</li>
-          <li class="fragment">Improved customer retention</li>
+          <li class="fragment">Product A: <span class="metric">$4.5M</span></li>
+          <li class="fragment">Product B: <span class="metric">$3.2M</span></li>
+          <li class="fragment">Product C: <span class="metric">$2.8M</span></li>
         </ul>
-        <aside class="notes">Use fragments to reveal items one by one to keep audience focus.</aside>
+        <aside class="notes">
+          Reveal each product revenue step by step.
+        </aside>
       </section>
 
-      <!-- Code sample with syntax highlighting -->
+      <!-- Interactive Chart Slide -->
       <section>
-        <h2>Example: Compute CAGR (Python)</h2>
-        <pre><code class="language-python">def cagr(start_value, end_value, years):
-    """Compound Annual Growth Rate"""
-    return (end_value / start_value) ** (1 / years) - 1
-
-print(f"CAGR: {cagr(100, 150, 3):.2%}")
-</code></pre>
-        <aside class="notes">Walk through the formula quickly and explain practical use. Show inputs and interpretation.</aside>
+        <h2>Revenue & Profit Over Quarters</h2>
+        <canvas id="revenueChart" class="chart-container"></canvas>
+        <aside class="notes">
+          Explain trends using the chart. Highlight Q3 performance spike.
+        </aside>
       </section>
 
-      <!-- Math slide -->
+      <!-- Code Slide: ROI Calculation -->
       <section>
-        <h2>Financial Formula</h2>
-        <p>Net Present Value (NPV):</p>
-        <p>\[\mathrm{NPV} = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t} \]</p>
-        <p>Where \(C_t\) are cashflows and \(r\) is discount rate.</p>
-        <aside class="notes">Explain intuition: discount future cash to present. Use a short example if asked.</aside>
+        <h2>Python Code: Calculating ROI</h2>
+        <pre><code class="language-python">
+def roi(gain, cost):
+    return (gain - cost) / cost * 100
+
+gain = 500000
+cost = 350000
+print(f"ROI: {roi(gain, cost)}%")
+        </code></pre>
+        <aside class="notes">
+          Demonstrate ROI calculation programmatically.
+        </aside>
       </section>
 
-      <!-- Slide with fragments and mixed content -->
+      <!-- Financial Formula Slide -->
       <section>
-        <h2>Recommendation</h2>
-        <p class="fragment">1. Reinvest in Product A (high ROI).</p>
-        <p class="fragment">2. Continue cost optimisation (process automation).</p>
-        <p class="fragment">3. Increase retention efforts for segment B.</p>
-        <aside class="notes">Tie recommendations to KPI impact and estimated costs/benefits.</aside>
-      </section>
+          <h3>Financial Formulas (MathJax)</h3>
+          <p>Weighted Average Cost of Capital (WACC):</p>
+          <p>\[ \text{WACC} = \frac{E}{V} r_e + \frac{D}{V} r_d (1 - T) \]</p>
+          <p>Discounted Cash Flow (perpetuity with growth):</p>
+          <p>\[ \text{Value} = \frac{\text{FCF}_1}{r - g} \]</p>
+          <p>Earnings Per Share (EPS): \( \displaystyle EPS = \frac{\text{Net Income}}{\text{Weighted Avg. Shares}} \)</p>
+          <h2>Statistical Formula</h2>
+  \[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]
+          <aside class="notes">Explain each variable: E (equity), D (debt), V (E+D), r_e, r_d, tax T, growth g.</aside>
+        </section>
 
-      <!-- Closing / Contact slide -->
+        <section>
+          <h2>Thank You</h2>
+          <p>Questions? Reach me at 23f3004293@ds.study.iitm.ac.in</p>
+          <p>Contact Link: <a href="mailto:23f3004293@ds.study.iitm.ac.in">23f3004293@ds.study.iitm.ac.in</a></p>
+          <p class="fragment">Press <kbd>Esc</kbd> for slide overview.</p>
+          <aside class="notes">Wrap up and move to Q&A. Remind audience about the Appendix in the repo.</aside>
+        </section>
+
+
+      <!-- Conclusion Slide -->
       <section>
-        <h2>Contact & Repo</h2>
-        <p>For the full interactive deck source and deployment instructions, see the project repo.</p>
-        <p class="email">Email: <a href="mailto:23f1001533@ds.study.iitm.ac.in">23f1001533@ds.study.iitm.ac.in</a></p>
-        <aside class="notes">Point them to the GitHub Pages link (published). Offer to walk through the publishing steps if requested.</aside>
+        <h2>Conclusion</h2>
+        <ul>
+          <li class="fragment">Strong revenue growth</li>
+          <li class="fragment">Healthy profit margins</li>
+          <li class="fragment">Operational efficiency improved</li>
+        </ul>
+        <aside class="notes">
+          Summarize key takeaways for stakeholders.
+        </aside>
       </section>
 
     </div>
   </div>
 
-  <!-- Reveal.js and plugins -->
-  <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.esm.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/notes/notes.esm.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/math/math.esm.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.esm.js"></script>
-
-  <!-- Highlight.js core (for code blocks) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <!-- Reveal.js & Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/math/math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
-    // Initialize Reveal
     Reveal.initialize({
       hash: true,
-      plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath ],
-      math: {
-        // mathjax config
-        engine: 'mathjax',
-        config: 'TeX-AMS_HTML-full'
+      slideNumber: true,
+      plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.KaTeX ]
+    });
+
+    // Chart.js example for Revenue & Profit
+    const ctx = document.getElementById('revenueChart').getContext('2d');
+    const revenueChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+        datasets: [
+          { label: 'Revenue ($M)', data: [3.2, 3.8, 4.5, 4.8], borderColor: 'blue', fill: false },
+          { label: 'Profit ($M)', data: [1.2, 1.5, 1.8, 2.0], borderColor: 'green', fill: false }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: { display: true, text: 'Revenue & Profit by Quarter' }
+        }
       }
     });
   </script>
 </body>
+
 </html>
+
+
+
